@@ -65,7 +65,7 @@ $ yarn start:client
 
 ```
 <p>
- * Navigate to <a href="http://localhost:3000/">http://localhost:3000/</a>
+ * Open <a href="http://localhost:3000/">http://localhost:3000/</a> to view it in browser
 </p>
 
 ## TODO
