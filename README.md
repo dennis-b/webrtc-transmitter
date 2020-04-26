@@ -20,13 +20,13 @@ This project has 3 parts:
 
 ## Prerequisites
 
-1 - Install [Gstreamer](https://gstreamer.freedesktop.org/download/) to your local machine.
+1 - Install [Gstreamer](https://gstreamer.freedesktop.org/download/).
 <br>
-2 - Install [Docker](https://www.docker.com/get-started) to your local machine.
+2 - Install [Docker](https://www.docker.com/get-started).
 <br>
-3 - Install [Docker Compose](https://docs.docker.com/compose/install/) to your local machine.
+3 - Install [Docker Compose](https://docs.docker.com/compose/install/).
 <br>
-4 - Install [Yarn](https://classic.yarnpkg.com/en/docs/install#mac-stable) to your local machine.
+4 - Install [Yarn](https://classic.yarnpkg.com/en/docs/install#mac-stable).
 
 ## Running
 
