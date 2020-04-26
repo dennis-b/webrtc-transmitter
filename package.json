@@ -1,12 +1,13 @@
 {
   "name": "webrtc-transmitter",
   "version": "1.0.0",
-  "description": "sample project for transmitting video with ffmpeg/gstreamer over webrtc",
+  "description": "Sample project for streaming video with ffmpeg/gstreamer over webrtc",
   "main": "index.js",
+  "author": "Dennis Borshchevski <dennisborsh@gmail.com>",
   "scripts": {
-    "start:clinet": "echo \"Error: no test specified\" && exit 1",
-    "start:server": "echo \"Error: no test specified\" && exit 1",
-    "start:transmiter": "echo \"Error: no test specified\" && exit 1"
+    "start:clinet": "cd ./client && yarn start",
+    "start:server": "cd ./server && yarn start",
+    "start:transmitter": "cd ./transmitter && yarn start"
   },
   "keywords": [
     "webrtc",
@@ -16,6 +17,5 @@
     "ffmpeg",
     "gstreamer"
   ],
-  "author": "dennisborsh@gmail.com",
-  "license": "ISC"
+  "license": "MIT"
 }
