@@ -2,11 +2,12 @@
 # webrtc-transmitter
 
 ## Description
-
-<h4>
+<a></a>
+<H4>
 Sample project for transmitting video/audio stream with ffmpeg/gstreamer over WebRTC.
+<br>
 This project has 3 parts:
-</h4>
+</H4>
 1 - server : node server that doing the WebRTC [signaling](https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling) process.
 <br>
 2 - transmitter - node simple app that streaming rtsp video stream (other stream also can be used)
@@ -48,3 +49,6 @@ $ yarn start:client
 <p>
  * Navigate to <a href="http://localhost:3000/">http://localhost:3000/</a>
 </p>
+
+## Running
+* Add ffmpeg example
