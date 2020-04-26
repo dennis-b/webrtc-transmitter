@@ -45,7 +45,9 @@ $ yarn
 
 ```
 
-## Running (from root folder)
+## Running
+
+<b>* from root folder</b>
 
 ```bash
 # start nats 
