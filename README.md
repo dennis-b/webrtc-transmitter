@@ -3,9 +3,10 @@
 
 ## Description
 
+<h4>
 Sample project for transmitting video/audio stream with ffmpeg/gstreamer over WebRTC.
 This project has 3 parts:
-<br>
+</h4>
 1 - server : node server that doing the WebRTC [signaling](https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling) process.
 <br>
 2 - transmitter - node simple app that streaming rtsp video stream (other stream also can be used)
