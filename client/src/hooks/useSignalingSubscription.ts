@@ -12,7 +12,6 @@ interface SignalingProps {
 }
 
 export function useSignalingSubscription({ onConnectionStateChange, connectionId, video, onRemoteAnswer }: SignalingProps) {
-
     const onSubscriptionData: any = async ({ subscriptionData: { data } }: any) => {
         console.log('received sdp offer ', data)
         const remoteConnection = get(data, Api.Subscriptions.SignalingRemoteAnswer.key);
