@@ -47,7 +47,7 @@ $ yarn
 
 ## Running
 
-<b>* from root folder</b>
+<b>* from root folder: </b>
 
 ```bash
 # start nats 
