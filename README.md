@@ -28,7 +28,24 @@ This project has 3 parts:
 <br>
 4 - Install [Yarn](https://classic.yarnpkg.com/en/docs/install#mac-stable).
 
-## Running
+## Installation
+
+```bash
+# install server 
+$ cd server 
+$ yarn
+
+# install transmiter 
+$ cd transmiter 
+$ yarn
+
+# install client 
+$ cd client 
+$ yarn
+
+```
+
+## Running (from root folder)
 
 ```bash
 # start nats 
