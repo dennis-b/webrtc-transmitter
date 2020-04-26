@@ -13,6 +13,10 @@ export class MessagesService {
         this.nc.publish(topic, payload);
     }
 
+    subscribe({ topic, callback }) {
+        this.nc.subscribe(topic, callback)
+    }
+
     sendRequest({ payload, topic, onResponse }: { payload: any, topic: string, onResponse?: (msg) => void }) {
         this.nc.request(topic, payload, (msg) => {
             console.log(msg)

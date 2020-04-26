@@ -9,20 +9,24 @@ import { useSignalingSubscription } from "../hooks/useSignalingSubscription";
 export function Stream() {
 
     const [connectionId, setConnectionId] = useState(uuid());
+    const [haveStream, setHaveStream] = useState(false);
     const videoRef = useRef<any>();
-    const [sdpOffer, { loading: offerLoading }] = useMutation(Api.Mutations.SignalingOffer.value);
+    const [requestStream, { loading: offerLoading }] = useMutation(Api.Mutations.SignalingOffer.value);
     const [sdpAnswer, { loading: answerLoading }] = useMutation(Api.Mutations.SignalingAnswer.value);
 
     useSignalingSubscription({
         connectionId,
-        onConnectionStateChange: ({ iceConnectionState }) => console.log(iceConnectionState),
+        onConnectionStateChange: ({ iceConnectionState }) => console.log(`stream state : ${iceConnectionState}`),
         video: videoRef.current,
-        onRemoteAnswer: data => sdpAnswer(data)
+        onRemoteAnswer: async data => {
+            await sdpAnswer(data)
+            setHaveStream(true)
+        }
     })
 
-    const sendOffer = async () => {
+    const onRequestStream = async () => {
         try {
-            await sdpOffer({ variables: { connectionId } })
+            await requestStream({ variables: { connectionId } })
         } catch (e) {
             console.log(e)
         }
@@ -30,13 +34,12 @@ export function Stream() {
 
     return (
         <StRoot>
-            <StStartStream
-                onClick={sendOffer}
-            >
+            <StStartStream onClick={onRequestStream}>
                 START STREAM
             </StStartStream>
 
             <StVideo
+                haveStream={haveStream}
                 autoPlay={true}
                 ref={videoRef}
             />

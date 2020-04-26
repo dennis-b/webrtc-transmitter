@@ -17,13 +17,12 @@ export function useSignalingSubscription({ onConnectionStateChange, connectionId
         console.log('received sdp offer ', data)
         const remoteConnection = get(data, Api.Subscriptions.SignalingRemoteAnswer.key);
         if (remoteConnection.connection) {
-            const data = await createPeerConnection({
+            const { connectionId, localDescription } = await createPeerConnection({
                 remoteConnection,
                 onConnectionStateChange,
                 video
             });
-            // await mutateWebRtcSignallerRequest("answer", data, nestId)
-            await onRemoteAnswer({ data })
+            await onRemoteAnswer({ variables: { connectionId, localDescription } })
         }
     };
 

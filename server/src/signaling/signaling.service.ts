@@ -14,9 +14,9 @@ export class SignalingService {
         this.messagesService.sendRequest({
             topic: 'startNegotiation',
             payload: { connectionId },
-            onResponse: (connection) => {
+            onResponse: ({ connection }) => {
+                console.log('onResponse', connection)
                 this.pubSub.publish('signalingRemoteAnswer', { signalingRemoteAnswer: { connection } })
-                // this.pubSub.publish('signalingRemoteAnswer', { signalingRemoteAnswer: { connection: { id: connectionId } } })
             }
         })
     }

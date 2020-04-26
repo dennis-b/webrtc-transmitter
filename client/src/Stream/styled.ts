@@ -15,7 +15,8 @@ export const StStartStream = styled.button`
   height: 3rem;
   cursor: pointer;
 `
-export const StVideo = styled.video`
-  width: 0;
-  height: 0;
+export const StVideo: any = styled.video`
+  width: ${({ haveStream }: any) => haveStream ? 'auto' : 0};
+  height: ${({ haveStream }: any) => haveStream ? 'auto' : 0};
+  background: ${({ haveStream }: any) => haveStream ? 'black' : 'transparent'};
 `

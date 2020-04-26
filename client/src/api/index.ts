@@ -7,7 +7,7 @@ export const Api = {
             key: 'signalingOffer'
         },
         SignalingAnswer: {
-            value: loader('./signaling-offer.mutation.graphql'),
+            value: loader('./signaling-answer.mutation.graphql'),
             key: 'signalingAnswer'
         }
     },
