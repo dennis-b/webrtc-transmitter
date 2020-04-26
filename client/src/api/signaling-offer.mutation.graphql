@@ -1,0 +1,3 @@
+mutation signalingOffer($connectionId: String!) {
+    signalingOffer(connectionId: $connectionId)
+}

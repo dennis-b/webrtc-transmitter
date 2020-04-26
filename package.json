@@ -1,0 +1,21 @@
+{
+  "name": "webrtc-transmitter",
+  "version": "1.0.0",
+  "description": "sample project for transmitting video with ffmpeg/gstreamer over webrtc",
+  "main": "index.js",
+  "scripts": {
+    "start:clinet": "echo \"Error: no test specified\" && exit 1",
+    "start:server": "echo \"Error: no test specified\" && exit 1",
+    "start:transmiter": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "webrtc",
+    "node",
+    "nestjs",
+    "react",
+    "ffmpeg",
+    "gstreamer"
+  ],
+  "author": "dennisborsh@gmail.com",
+  "license": "ISC"
+}

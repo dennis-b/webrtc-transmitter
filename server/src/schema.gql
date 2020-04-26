@@ -1,0 +1,19 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Query {
+  dummy: Object!
+}
+
+"""Date custom scalar type"""
+scalar Object
+
+type Mutation {
+  signalingOffer(connectionId: String!): Object!
+  signalingAnswer(connectionId: String!, localDescription: String!): Object!
+}
+
+type Subscription {
+  signalingRemoteAnswer(connectionId: String!): Object!
+}
