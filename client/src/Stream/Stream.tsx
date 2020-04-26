@@ -34,9 +34,12 @@ export function Stream() {
 
     return (
         <StRoot>
+            {!haveStream &&
             <StStartStream onClick={onRequestStream}>
                 START STREAM
             </StStartStream>
+            }
+
 
             <StVideo
                 haveStream={haveStream}
