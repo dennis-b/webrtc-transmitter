@@ -36,7 +36,7 @@ $ cd server
 $ yarn
 
 # install transmiter 
-$ cd transmiter 
+$ cd transmitter 
 $ yarn
 
 # install client 
@@ -57,7 +57,7 @@ $ docker-compose -d up
 # start server 
 $ yarn start:server
 
-# start transmiter 
+# start transmitter 
 $ yarn start:transmitter
 
 # start client 
