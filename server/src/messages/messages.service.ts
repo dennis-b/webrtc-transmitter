@@ -15,7 +15,6 @@ export class MessagesService {
 
     sendRequest({ payload, topic, onResponse }: { payload: any, topic: string, onResponse?: (msg) => void }) {
         this.nc.request(topic, payload, (msg) => {
-            console.log(msg)
             onResponse && onResponse(msg);
         })
     }
