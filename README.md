@@ -15,7 +15,7 @@ This project has 3 parts:
 <br>
 <br>
 
- * I use [NATS](https://nats.io/) for messaging system between the server and transmitter. 
+ * I use [nats.io](https://nats.io/) for messaging system between the server and transmitter. 
  * I use [GraphQL](https://graphql.org/) for the client - server communication.
 
 ## Prerequisites
