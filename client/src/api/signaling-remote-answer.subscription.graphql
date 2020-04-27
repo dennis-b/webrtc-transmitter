@@ -1,3 +1,0 @@
-subscription signalingRemoteAnswer($connectionId: String!) {
-    signalingRemoteAnswer(connectionId: $connectionId)
-}

@@ -15,7 +15,7 @@ export class SignalingService {
             topic: 'startNegotiation',
             payload: { connectionId },
             onResponse: ({ connection }) => {
-                this.pubSub.publish('signalingRemoteAnswer', { signalingRemoteAnswer: { connection } })
+                this.pubSub.publish('signalingRemoteOffer', { signalingRemoteOffer: { connection } })
             }
         })
     }

@@ -2,9 +2,9 @@ import { loader } from "graphql.macro";
 
 export const Api = {
     Mutations: {
-        SignalingOffer: {
-            value: loader('./signaling-offer.mutation.graphql'),
-            key: 'signalingOffer'
+        RequestStream: {
+            value: loader('./request-stream.mutation.graphql'),
+            key: 'requestStream'
         },
         SignalingAnswer: {
             value: loader('./signaling-answer.mutation.graphql'),
@@ -12,9 +12,9 @@ export const Api = {
         }
     },
     Subscriptions: {
-        SignalingRemoteAnswer: {
-            value: loader('./signaling-remote-answer.subscription.graphql'),
-            key: 'signalingRemoteAnswer'
+        SignalingRemoteOffer: {
+            value: loader('./signaling-remote-offer.subscription.graphql'),
+            key: 'signalingRemoteOffer'
         }
 
     }

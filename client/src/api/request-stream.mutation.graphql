@@ -1,0 +1,3 @@
+mutation requestStream($connectionId: String!) {
+    requestStream(connectionId: $connectionId)
+}

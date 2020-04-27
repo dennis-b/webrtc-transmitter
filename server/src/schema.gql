@@ -10,10 +10,10 @@ type Query {
 scalar Object
 
 type Mutation {
-  signalingOffer(connectionId: String!): Object!
+  requestStream(connectionId: String!): Object!
   signalingAnswer(connectionId: String!, localDescription: String!): Object!
 }
 
 type Subscription {
-  signalingRemoteAnswer(connectionId: String!): Object!
+  signalingRemoteOffer(connectionId: String!): Object!
 }

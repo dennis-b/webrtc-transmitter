@@ -14,7 +14,7 @@ export class SignalingResolver {
     }
 
     @Mutation(() => Object)
-    async signalingOffer(@Args({ name: 'connectionId' }) connectionId: string) {
+    async requestStream(@Args({ name: 'connectionId' }) connectionId: string) {
         this.signalingService.onStartNegotiation({ connectionId })
         return { ok: true }
     }
@@ -29,9 +29,9 @@ export class SignalingResolver {
     }
 
     @Subscription(returns => Object, {
-        filter: (payload, variables) => payload.signalingRemoteAnswer.connection.id === variables.connectionId,
+        filter: (payload, variables) => payload.signalingRemoteOffer.connection.id === variables.connectionId,
     })
-    signalingRemoteAnswer(@Args('connectionId') connectionId: string) {
-        return this.pubSub.asyncIterator('signalingRemoteAnswer');
+    signalingRemoteOffer(@Args('connectionId') connectionId: string) {
+        return this.pubSub.asyncIterator('signalingRemoteOffer');
     }
 }

@@ -1,0 +1,3 @@
+subscription signalingRemoteOffer($connectionId: String!) {
+    signalingRemoteOffer(connectionId: $connectionId)
+}

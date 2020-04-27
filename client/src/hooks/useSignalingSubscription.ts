@@ -14,7 +14,7 @@ interface SignalingProps {
 export function useSignalingSubscription({ onConnectionStateChange, connectionId, video, onRemoteAnswer }: SignalingProps) {
     const onSubscriptionData: any = async ({ subscriptionData: { data } }: any) => {
         console.log('received sdp offer ', data)
-        const remoteConnection = get(data, Api.Subscriptions.SignalingRemoteAnswer.key);
+        const remoteConnection = get(data, Api.Subscriptions.SignalingRemoteOffer.key);
         if (remoteConnection.connection) {
             const { connectionId, localDescription } = await createPeerConnection({
                 remoteConnection,
@@ -25,7 +25,7 @@ export function useSignalingSubscription({ onConnectionStateChange, connectionId
         }
     };
 
-    useSubscription(Api.Subscriptions.SignalingRemoteAnswer.value, {
+    useSubscription(Api.Subscriptions.SignalingRemoteOffer.value, {
         variables: { connectionId },
         onSubscriptionData
     })

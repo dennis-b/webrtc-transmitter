@@ -11,7 +11,7 @@ export function Stream() {
     const [connectionId, setConnectionId] = useState(uuid());
     const [haveStream, setHaveStream] = useState(false);
     const videoRef = useRef<any>();
-    const [requestStream, { loading: offerLoading }] = useMutation(Api.Mutations.SignalingOffer.value);
+    const [requestStream, { loading: requestStreamLoading }] = useMutation(Api.Mutations.RequestStream.value);
     const [sdpAnswer, { loading: answerLoading }] = useMutation(Api.Mutations.SignalingAnswer.value);
 
     useSignalingSubscription({
@@ -39,7 +39,6 @@ export function Stream() {
                 START STREAM
             </StStartStream>
             }
-
 
             <StVideo
                 haveStream={haveStream}
