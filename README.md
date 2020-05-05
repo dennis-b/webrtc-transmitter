@@ -7,9 +7,9 @@ Sample project for transmitting video/audio stream with ffmpeg/gstreamer over We
 This project has 3 parts:
 <br>
 <br>
-1 - <b>server</b> : node server that doing the WebRTC [signaling](https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling) process.
+1 - <b>server</b> : node server for WebRTC [signaling](https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling) process.
 <br>
-2 - <b>transmitter</b> - node simple app that streaming rtsp video stream (other stream also can be used)
+2 - <b>transmitter</b> - node app that streaming rtsp video stream (other stream also can be used)
 <br> 
 3 - <b>client</b> - react application for displaying the stream.
 <br>
